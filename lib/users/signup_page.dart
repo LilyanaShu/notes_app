@@ -58,6 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
               child: Column(
                 children: [
                   TextFormField(
+                    //controller: usernameController;
                     // The validator receives the text that the user has entered.
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -73,6 +74,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                   const SizedBox(height: 20,),
                   TextFormField(
+                    //controller: passwordController,
                     // The validator receives the text that the user has entered.
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -153,7 +155,15 @@ class _SignUpPageState extends State<SignUpPage> {
           }, child:
           const Text("Sign Up"),
 
-          )
+          ),
+          const SizedBox(height: 20,),
+          Center(
+          child: GestureDetector(
+            onTap: () { Navigator.pop(context); },
+            child: InkWell(
+              child: Text("Back to Sign In", style: TextStyle(color: GetColor.primarySeedColor, fontSize: 16, fontWeight: FontWeight.bold)),
+            ),
+          )),
         ],
       ),
     );

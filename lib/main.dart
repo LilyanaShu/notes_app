@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:users_app/users/welcome.dart';
 import 'package:users_app/users/signin.dart';
 import 'package:users_app/users/signup_page.dart';
+import 'package:users_app/pages/homepage.dart';
 import 'package:users_app/utils/get_color.dart';
+import 'package:users_app/utils/get_shared_preferences.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await GetSharedPreferences.init();
   runApp(const MyApp());
 }
 
@@ -29,11 +33,15 @@ class MyApp extends StatelessWidget {
         ),
         inputDecorationTheme: InputDecorationTheme(
           iconColor: GetColor.primarySeedColor,
-
           labelStyle: TextStyle(
             //backgroundColor: Colors.purple,
             color: GetColor.secondarySeedColor,
             fontSize: 16
+          ),
+          hintStyle: TextStyle(
+            color: GetColor.secondarySeedColor,
+            fontSize: 16,
+
           )
         ),
 
@@ -51,14 +59,28 @@ class MyApp extends StatelessWidget {
             backgroundColor: GetColor.primarySeedColor,
             foregroundColor: GetColor.whiteTextColor
           ),
+        ),
+
+        //scaffoldBackgroundColor: GetColor.secondarySeedColor,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          backgroundColor: GetColor.primarySeedColor,
+          foregroundColor: GetColor.whiteTextColor,
+          titleTextStyle: const TextStyle(
+              fontSize: 22,
+              letterSpacing: 5
+          ),
         )
       ),
+
+      //home: const SignInPage(),
 
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomePage(),
         '/signin': (context) => const SignInPage(),
         '/signup' : (context) => const SignUpPage(),
+        '/homepage' : (context) => const HomePage()
       },
 
       /*
