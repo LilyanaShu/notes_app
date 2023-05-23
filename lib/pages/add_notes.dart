@@ -104,8 +104,9 @@ class _AddNotesState extends State<AddNotes> {
                             }
                             else {
                               addNote();}
+                            Navigator.of(context).pop();
                           }
-                          Navigator.of(context).pop();
+
                         }
                         ,)
                   ),
