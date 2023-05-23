@@ -1,16 +1,8 @@
-# users_app
+# from previous users_app, I add shared preferences and new feature Notes.
 
-A new Flutter project.
+I practice how to use shared preferences and SQFLite to create menu Add, Update and Delete Notes
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="320" alt="image" src="https://github.com/LilyanaShu/notes_app/assets/132737700/18ca78b3-0d81-421e-9b51-2e2c044de474">
+<img width="320" alt="image" src="https://github.com/LilyanaShu/notes_app/assets/132737700/bacf65be-44d2-469d-ab51-55cb045427f6">
+<img width="320" alt="image" src="https://github.com/LilyanaShu/notes_app/assets/132737700/bbe41795-d766-442f-9821-cb95c4a20d05">
+<img width="320" alt="image" src="https://github.com/LilyanaShu/notes_app/assets/132737700/a160e719-98ae-44ac-8bf8-ccb9a2f97716">
